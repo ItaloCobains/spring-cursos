@@ -14,3 +14,34 @@ Content-Type: application/json
 
 ###
 
+# Cria um modulo
+POST {{baseUrl}}/modulos
+Content-Type: application/json
+
+{
+  "nome": "Modulo1",
+  "descricao": "Curso de aaaaaaa",
+  "ordem": 1,
+  "ativo": true
+}
+
+###
+
+# Cria um exercicio
+POST {{baseUrl}}/exercicios
+Content-Type: application/json
+
+{
+  "nome": "Exercicio 1",
+  "descricao": "ex de aaaaaaa",
+  "ordem": 1,
+  "ativo": true,
+  "tipo": "A",
+  "enunciado": "Enunciado do exercicio",
+  "resposta": "Resposta do exercicio",
+  "moduloId": "38f58220-5114-4a1a-bce1-e272bb78dda2",
+  "alternativas": "A,B,C,D",
+  "dica": "Dica do exercicio"
+}
+
+###
