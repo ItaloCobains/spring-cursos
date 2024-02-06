@@ -1,0 +1,16 @@
+@baseUrl = http://localhost:8080
+
+# Cria um curso
+POST {{baseUrl}}/cursos
+Content-Type: application/json
+
+{
+  "nome": "Curso de Java",
+  "descricao": "Curso de Java para iniciantes",
+  "valor": 100.00,
+  "duracao": 40,
+  "ativo": true
+}
+
+###
+
