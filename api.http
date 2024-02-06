@@ -5,7 +5,7 @@ POST {{baseUrl}}/cursos
 Content-Type: application/json
 
 {
-  "nome": "Curso de Java",
+  "nome": "Curso de Java 2",
   "descricao": "Curso de Java para iniciantes",
   "valor": 100.00,
   "duracao": 40,
