@@ -1,14 +1,25 @@
 package br.italocobains.cursosapi.cursos.controllers;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Data;
 
 @Data
+@Entity(name = "cursos")
 public class CursoEntity {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   @NotBlank(message = "O nome do curso não pode estar em branco")
@@ -25,4 +36,7 @@ public class CursoEntity {
 
   @NotNull(message = "O campo ativo não pode ser nulo")
   private Boolean ativo;
+
+  @CreationTimestamp
+  private LocalDateTime createdAt;
 }
